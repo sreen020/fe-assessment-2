@@ -1,0 +1,36 @@
+{
+  "name": "Nerdr.match()",
+  "version": "1.0.0",
+  "description": "A dating platform for programmers",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon",
+    "scss": "node-sass --watch scss -o public/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sjagoori/dating-app"
+  },
+  "author": "Shabier Jagoori",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "bcrypt": "^4.0.1",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.0.2",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "helmet": "^3.23.1",
+    "mongodb": "^3.5.7",
+    "mongoose": "^5.9.14"
+  },
+  "devDependencies": {
+    "eslint": "^7.0.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.20.2",
+    "nodemon": "^2.0.4",
+    "node-sass": "^4.14.1"
+  }
+}

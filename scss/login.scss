@@ -1,0 +1,112 @@
+@import '_main.scss';
+
+body {
+  max-width: 35rem;
+}
+
+main {
+  margin-top: 0.5rem;
+}
+
+.c-login-container {
+  display: flex;
+  flex-direction: column;
+  blockquote {
+    margin-bottom: 0.8rem;
+  }
+  a {
+    margin-top: 0.5rem;
+    width: auto;
+  }
+}
+
+.c-login__subheader {
+  margin-bottom: 0.8rem;
+  color: $color-white;
+}
+
+.c-login__input-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  input,
+  textarea {
+    border: 0;
+    resize: none;
+    outline: none;
+
+    &[type="file"] {
+      display: none;
+    }
+  }
+}
+
+.c-login__button-container {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.c-login__radio-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 100%;
+  margin-bottom: 1rem;
+
+  label {
+    position: relative;
+    display: block;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid $color-grey;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    text-align: center;
+    cursor: pointer;
+
+    &:last-of-type {
+      margin-right: 0px;
+    }
+
+    &:hover {
+      background-color: lighten($color-grey-dark, 10%);
+    }
+  }
+
+  input[type="radio"], input[type="checkbox"] {
+    display: none;
+  }
+
+  input[type="radio"]:checked+label, input[type="checkbox"]:checked+label {
+    transition: .3s;
+    background-color: $color-green;
+    border-color: $color-green;
+    color: $color-black;
+  }
+}
+
+.c-login__password {
+  display: flex;
+  flex-direction: column;
+}
+
+.highlight {
+  background-image: linear-gradient(transparent 15px, rgba($color-grey-dark, .3) 10px);
+  transition: .3s;
+  font-weight: bold;
+
+  &:hover {
+    background-image: linear-gradient(transparent -15px, rgba($color-grey-dark, .3) -10px);
+  }
+}
+
+.warning {
+  color: $color-red;
+}
+
+
+.padding-bottom-2 {
+  padding-bottom: 2rem;
+}

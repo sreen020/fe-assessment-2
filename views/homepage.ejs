@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('partials/head', {
+  title: "Nerdr.match()",
+  css: "login"
+})%>
+
+
+<body>
+  <main>
+    <form action="profile" method="POST" class="c-login">
+      <div class="c-login-container">
+      <% if (typeof query !== 'undefined') { %>
+        <h1 class="c-login__greeting warning"> <%= query.errorMessage %> </h1>
+      <% } else { %>
+        <h1 class="c-login__greeting">Hi there!</h1>
+      <% } %>
+        <div class="c-login__input-container">
+          <label for="lemail">Your email:</label>
+          <input type="email" name="email" id="lemail" required>
+          <label for="lpassword">Your password:</label>
+          <input type="password" name="password" id="lpassword" required>
+        </div>
+        <div class="c-login__button-container">
+          <a class="button--secondary" href="/register/1">Sign up</a>
+          <button type="submit" class="button--primary">Login</button>
+        </div>
+      </div>
+    </form>
+  </main>
+</body>
+
+</html>
